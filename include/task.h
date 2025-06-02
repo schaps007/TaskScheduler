@@ -17,7 +17,8 @@ typedef enum {
 typedef enum {
     SCHED_PRIORITY,
     SCHED_ROUND_ROBIN,
-    SCHED_FCFS
+    SCHED_FCFS,
+    SCHED_MLFQ
 } SchedulerType;
 
 typedef struct {
@@ -28,6 +29,7 @@ typedef struct {
     TaskState state;
     time_t arrival_time;
     time_t finish_time;
+    int queue_level;
 } Task;
 
 extern Task tasks[MAX_TASKS];
@@ -36,5 +38,5 @@ extern SchedulerType sched_type;
 
 void create_task(int id, int duration_ms, int priority);
 void print_task_stats();
-
+void enqueue(int level, int task_id);
 #endif

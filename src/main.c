@@ -12,7 +12,7 @@ int main() {
     srand(time(NULL));
 
     printf("Select scheduler type:\n");
-    printf("1. Priority\n2. Round Robin\n3. FCFS\n> ");
+    printf("1. Priority\n2. Round Robin\n3. FCFS\n4. MLFQ\n ");
     int choice;
     scanf("%d", &choice);
     set_scheduler_type(choice);

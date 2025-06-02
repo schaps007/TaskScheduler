@@ -13,7 +13,11 @@ void create_task(int id, int duration_ms, int priority) {
         log_message("Maximum task limit reached");
         return;
     }
-    
+    tasks[task_count].queue_level = 0;
+    if (sched_type == SCHED_MLFQ) {
+        enqueue(0, task_count);
+    }
+
     tasks[task_count] = (Task){
         .id = id,
         .duration_ms = duration_ms,
