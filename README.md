@@ -5,6 +5,7 @@ This project implements a multithreaded CPU task scheduler in C, simulating thre
 - Priority Scheduling-  Tasks with higher priority (lower priority number) are scheduled first.
 - Round Robin (RR)- Tasks are scheduled in a cyclic order, running each task for a fixed time slice (quantum) before moving to the next.
 - First-Come, First-Served (FCFS)- Tasks are executed in the order they arrive, without preemption.
+- Multilevel Feedback Queue (MLFQ) – A dynamic, multi-queue scheduler that adjusts task priority over time based on runtime behavior.
 
 ## Key Features
 - Task Modeling: Each task has an ID, priority, total required runtime, and internal state `(READY, RUNNING, BLOCKED, FINISHED)`.
