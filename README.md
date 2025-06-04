@@ -1,6 +1,6 @@
 ### Multithreaded Task Scheduler in C
 
-This project implements a multithreaded CPU task scheduler in C, simulating three fundamental scheduling strategies used in operating systems:
+This project implements a multithreaded CPU task scheduler in C, simulating scheduling strategies used in operating systems:
 
 - Priority Scheduling-  Tasks with higher priority (lower priority number) are scheduled first.
 - Round Robin (RR)- Tasks are scheduled in a cyclic order, running each task for a fixed time slice (quantum) before moving to the next.
